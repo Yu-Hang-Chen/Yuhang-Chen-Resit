@@ -1,12 +1,8 @@
 # Development Log
 
-This log records daily development progress for the Power Cell Escape resit project. It is updated on every working day, not retroactively.
+This log records daily development progress for the Power Cell Escape resit project. It is updated on every working day, not retroactively. 
 
----
-
-## Template (copy this block for each new day)
-
-### [YYYY-MM-DD]
+### [2026.7.30]
 
 **Planned:**
 - What I intended to work on today.
@@ -26,52 +22,3 @@ This log records daily development progress for the Power Cell Escape resit proj
 **Next steps:**
 - What I plan to do next session.
 
----
-
-## Log Entries
-
-### 2026-XX-XX
-
-**Planned:**
-- Set up project structure, import base assets, create initial concept design document.
-
-**Done:**
-- Created Unity project, folder structure (Scripts/Scenes/Prefabs/Art/Audio), pushed initial concept design doc to Docs/.
-
-**Testing:**
-- N/A (setup phase).
-
-**Issues / Feedback:**
-- None yet.
-
-**Related commits:**
-- [Initial project setup](link)
-
-**Next steps:**
-- Start implementing player movement script.
-
----
-
-### 2026-XX-XX
-
-**Planned:**
-- 
-
-**Done:**
-- 
-
-**Testing:**
-- 
-
-**Issues / Feedback:**
-- 
-
-**Related commits:**
-- 
-
-**Next steps:**
-- 
-
----
-
-*(Continue adding new dated entries above this line as development progresses. Aim for substantive commits on at least 5 different days.)*
