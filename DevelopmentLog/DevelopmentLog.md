@@ -1,61 +1,77 @@
-Development Log
+# Development Log
+
 This log records daily development progress for the Power Cell Escape resit project. It is updated on every working day, not retroactively.
 
-Template (copy this block for each new day)
-[YYYY-MM-DD]
-Planned:
+---
 
-What I intended to work on today.
-Done:
+## Template (copy this block for each new day)
 
-What I actually implemented/changed today.
-Testing:
+### [YYYY-MM-DD]
 
-What I tested and the result (e.g. "Tested player collision with enemy — worked as expected" or "Found bug: exit door doesn't unlock after collecting all 3 cells").
-Issues / Feedback:
+**Planned:**
+- What I intended to work on today.
 
-Any bugs encountered, blockers, or feedback received (from peers, playtesting, etc.).
-Related commits:
+**Done:**
+- What I actually implemented/changed today.
 
-commit message
-Next steps:
+**Testing:**
+- What I tested and the result (e.g. "Tested player collision with enemy — worked as expected" or "Found bug: exit door doesn't unlock after collecting all 3 cells").
 
-What I plan to do next session.
-Log Entries
-2026-XX-XX
-Planned:
+**Issues / Feedback:**
+- Any bugs encountered, blockers, or feedback received (from peers, playtesting, etc.).
 
-Set up project structure, import base assets, create initial concept design document.
-Done:
+**Related commits:**
+- [commit message](link-to-commit)
 
-Created Unity project, folder structure (Scripts/Scenes/Prefabs/Art/Audio), pushed initial concept design doc to Docs/.
-Testing:
+**Next steps:**
+- What I plan to do next session.
 
-N/A (setup phase).
-Issues / Feedback:
+---
 
-None yet.
-Related commits:
+## Log Entries
 
-Initial project setup
-Next steps:
+### 2026-XX-XX
 
-Start implementing player movement script.
-2026-XX-XX
-Planned:
--
+**Planned:**
+- Set up project structure, import base assets, create initial concept design document.
 
-Done:
--
+**Done:**
+- Created Unity project, folder structure (Scripts/Scenes/Prefabs/Art/Audio), pushed initial concept design doc to Docs/.
 
-Testing:
--
+**Testing:**
+- N/A (setup phase).
 
-Issues / Feedback:
--
+**Issues / Feedback:**
+- None yet.
 
-Related commits:
--
+**Related commits:**
+- [Initial project setup](link)
 
-Next steps:
--
+**Next steps:**
+- Start implementing player movement script.
+
+---
+
+### 2026-XX-XX
+
+**Planned:**
+- 
+
+**Done:**
+- 
+
+**Testing:**
+- 
+
+**Issues / Feedback:**
+- 
+
+**Related commits:**
+- 
+
+**Next steps:**
+- 
+
+---
+
+*(Continue adding new dated entries above this line as development progresses. Aim for substantive commits on at least 5 different days.)*
