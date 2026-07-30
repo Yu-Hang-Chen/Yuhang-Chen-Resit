@@ -43,7 +43,9 @@ Assets/
 ├── Art/         - Models, textures, sprites
 └── Audio/       - Sound effects and music
 Docs/            - Concept design docs and testing tables
-DevelopmentLog.md - Ongoing development log
+DevelopmentLog/
+├── DevelopmentLog.md- Ongoing development log
+├── TestingTable.md - ongoing testing and debugging log
 ```
 
 ## External Assets & Credits
