@@ -5,20 +5,22 @@ This log records daily development progress for the Power Cell Escape resit proj
 ### [2026.7.30]
 
 **Planned:**
-- What I intended to work on today.
+- I have planned to set up the project and version control, build the map and the initial player movement component on the first day, which is today.
 
 **Done:**
-- What I actually implemented/changed today.
+- Project has been set up and the map has been built. The player movement do not finish before I sleep.
 
 **Testing:**
-- What I tested and the result (e.g. "Tested player collision with enemy — worked as expected" or "Found bug: exit door doesn't unlock after collecting all 3 cells").
+- As for the map building, I test it with my camera and there seems good everywhere.
 
 **Issues / Feedback:**
-- Any bugs encountered, blockers, or feedback received (from peers, playtesting, etc.).
+- The player movement shall be finished tomorrow and do the testing.
 
 **Related commits:**
-- [commit message](link-to-commit)
+- 461ff702ef5a2772e377fafddf1adc52e196d789
+- 65ed0b5abb89606e8939d39de6e44ced322c7d45
+- 2e4c39e245dbdac94c22977d067ebf18afa700a8
 
 **Next steps:**
-- What I plan to do next session.
+- Follow the plan of Day 2 which is about to initialize the cells and doors.
 
