@@ -17,9 +17,7 @@ This log records daily development progress for the Power Cell Escape resit proj
 - The player movement shall be finished tomorrow and do the testing.
 
 **Related commits:**
-- 461ff702ef5a2772e377fafddf1adc52e196d789
-- 65ed0b5abb89606e8939d39de6e44ced322c7d45
-- 2e4c39e245dbdac94c22977d067ebf18afa700a8
+- faa4a2deec084ccca26c8a4fee3418d77393d666
 
 **Next steps:**
 - Follow the plan of Day 2 which is about to initialize the cells and doors.
