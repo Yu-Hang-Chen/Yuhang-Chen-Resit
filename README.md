@@ -45,7 +45,9 @@ Assets/
 Docs/            - Concept design docs and testing tables
 DevelopmentLog/
 ├── DevelopmentLog.md- Ongoing development log
-├── TestingTable.md - ongoing testing and debugging log
+├── TestingTable.md - Ongoing testing Table, including at least 5 important tests
+ProjectSettings/ - All project setting files
+Packages/        - All packages
 ```
 
 ## External Assets & Credits
