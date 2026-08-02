@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float rotationSpeed = 10f;
 
+    [Header("Power Cell Count")]
+    public int count = 0;
+
     private Rigidbody rb;
     private Camera mainCamera;
 
@@ -58,6 +61,19 @@ public class PlayerController : MonoBehaviour
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
             }
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("key"))
+        {
+            Debug.Log("Collide");
+            count += 1;
+        }
+        else if (collision.gameObject.CompareTag("enemy"))
+        {
+            
         }
     }
 }
