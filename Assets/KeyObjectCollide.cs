@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class KeyObjectCollide : MonoBehaviour
 {
+
+    public GameObject explosionEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,19 @@ public class KeyObjectCollide : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Key Collide");
+            
+            CollectedByPlayer();
             
         }
        
     } 
+
+    void CollectedByPlayer(){
+
+        Destroy(this.gameObject);
+        GameObject effect = GameObject.Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 1f);
+
+
+    }
 }
