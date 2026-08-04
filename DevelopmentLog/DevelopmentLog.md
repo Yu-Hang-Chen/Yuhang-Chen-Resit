@@ -44,3 +44,23 @@ This log records daily development progress for the Power Cell Escape resit proj
 **Next steps:**
 - Follow the plan of Day 3 tomorrow and finish player movement as soon as possible
 
+### [2026.8.2]
+
+**Planned:**
+- I plan to make an explosion effect for this game and start to finalize the logic of monsters
+
+**Done:**
+- Explosion Effect has been added.
+
+**Testing:**
+- Pass the test automatically.
+
+**Issues / Feedback:**
+- The monsters are still under developing
+
+**Related commits:**
+- 932f439c4d634688a4e25ee2bb6892c5fd2a501f
+
+**Next steps:**
+- Follow the plan of day 4 and finalize the players and monsters.
+
