@@ -64,3 +64,24 @@ This log records daily development progress for the Power Cell Escape resit proj
 **Next steps:**
 - Follow the plan of day 4 and finalize the players and monsters.
 
+### [2026.8.3]
+
+**Planned:**
+- I plan to finalize the player movement feature and start to make some weapons for this game.
+
+**Done:**
+- Player movement has been finalized and weapons are added.
+
+**Testing:**
+- Weapons can be used for destroying monsters.
+
+**Issues / Feedback:**
+- Time is very limited now so I must get it faster
+
+**Related commits:**
+- 908b2abb92650a1dc8adc3002c05f8e8d0740693
+
+**Next steps:**
+- Follow the plan of day 5 to finalize the monsters and start to debug.
+
+
