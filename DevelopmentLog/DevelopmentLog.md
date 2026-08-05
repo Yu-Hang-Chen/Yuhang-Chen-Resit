@@ -84,4 +84,25 @@ This log records daily development progress for the Power Cell Escape resit proj
 **Next steps:**
 - Follow the plan of day 5 to finalize the monsters and start to debug.
 
+### [2026.8.4 - 2026.8.5]
+
+**Planned:**
+- Finish the monsters and the combat logic.
+
+**Done:**
+- Almost everything has been done.
+
+**Testing:**
+- The overall game testings.
+
+**Issues / Feedback:**
+- Please see it in the testing table.
+
+**Related commits:**
+- a233f5f413c16e8df4a6519a930afbf6b1cb0e04
+
+**Next steps:**
+- Improve and debugging before final submission. 
+
+
 
