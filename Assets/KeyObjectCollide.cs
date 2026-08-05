@@ -30,10 +30,9 @@ public class KeyObjectCollide : MonoBehaviour
     } 
 
     void CollectedByPlayer(){
-
+        GameObject effect = GameObject.Instantiate(explosionEffect, transform.position, explosionEffect.transform.rotation);
         Destroy(this.gameObject);
-        GameObject effect = GameObject.Instantiate(explosionEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 1f);
+        Destroy(effect, 2);
 
 
     }

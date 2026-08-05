@@ -20,6 +20,8 @@ public class MachineGunController : MonoBehaviour
             nextShotTime = Time.time + shootCoolDown / 1000;
             BulletControl bullete = Instantiate(bulletControl, shootingStart.position, shootingStart.rotation) as BulletControl;
             bullete.setSpeed(bulletSpeed);
+
+            Destroy(bullete, 8);
         }
     }
 }

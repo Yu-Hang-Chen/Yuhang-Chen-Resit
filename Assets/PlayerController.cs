@@ -1,8 +1,14 @@
 
 using UnityEngine;
+using System.Collections;
+using Unity.VisualScripting;
+
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Player Property")]
+    public int currentHp = 100;
+
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float rotationSpeed = 10f;
@@ -10,21 +16,35 @@ public class PlayerController : MonoBehaviour
     [Header("Power Cell Count")]
     public int count = 0;
 
+    public HPBarFollow hpBarFollow;
+
     private Rigidbody rb;
     public Camera mainCamera;
 
     public MachineGunController gunController;
 
+    [Header("Flash On Attact")]
+    public Color flashColor = Color.red;   
+    public float flashDuration = 0.5f;     
+    public int flashCount = 4;
+
+    private Renderer playerRenderer;
+    public Material originalMaterial;
+    private bool isFlashing = false;
+
+    public GameObject loseMenuUI;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerRenderer = rb.GetComponent<Renderer>();
         if (rb != null)
         {
             rb.freezeRotation = true;
         }
         mainCamera = Camera.main;
-       
+        
 
 
 
@@ -38,7 +58,6 @@ public class PlayerController : MonoBehaviour
 
         if (ground.Raycast(ray, out rayDistance)) {
             Vector3 rayhitPoint = ray.GetPoint(rayDistance);
-            //Debug.Log(rayhitPoint);
 
             Vector3 heightCorrection = new Vector3(rayhitPoint.x, transform.position.y, rayhitPoint.z);
             
@@ -95,12 +114,66 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("key"))
         {
-            Debug.Log("Collide");
             count += 1;
         }
-        else if (collision.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.CompareTag("Water"))
         {
-            
+            Dead();
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.CompareTag("Water")) {
+            Debug.Log("Dead");
+            Dead();
+        }
+
+
+        
+    }
+
+    public void takeDamage(int damage) {
+        // 
+        if (isFlashing) return;
+
+        StartCoroutine(FlashEffect());
+
+        currentHp -= damage;
+
+        hpBarFollow.SetHealth(currentHp);
+
+        if (currentHp <= 0) {
+            Dead();
         }
     }
+
+    IEnumerator FlashEffect()
+    {
+        isFlashing = true;
+        float interval = flashDuration / flashCount;
+
+        for (int i = 0; i < flashCount; i++)
+        {
+            playerRenderer.material.color = flashColor;
+            yield return new WaitForSeconds(interval);
+
+            playerRenderer.material.color = originalMaterial.color;
+            yield return new WaitForSeconds(interval);
+        }
+
+        isFlashing = false;
+    }
+
+    void Dead() {
+
+        Time.timeScale = 0f;
+        loseMenuUI.SetActive(true);
+        Debug.Log("Player Dead");
+
+    }
+
+
 }
