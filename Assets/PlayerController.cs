@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     public int count = 0;
 
     private Rigidbody rb;
-    private Camera mainCamera;
+    public Camera mainCamera;
+
+    public MachineGunController gunController;
+
 
     void Start()
     {
@@ -21,8 +24,32 @@ public class PlayerController : MonoBehaviour
             rb.freezeRotation = true;
         }
         mainCamera = Camera.main;
-    }
+       
 
+
+
+    }
+    // Attack
+    void Update()
+    {
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Plane ground = new Plane(Vector3.up, Vector3.zero);
+        float rayDistance;
+
+        if (ground.Raycast(ray, out rayDistance)) {
+            Vector3 rayhitPoint = ray.GetPoint(rayDistance);
+            //Debug.Log(rayhitPoint);
+
+            Vector3 heightCorrection = new Vector3(rayhitPoint.x, transform.position.y, rayhitPoint.z);
+            
+            transform.LookAt(heightCorrection);
+        }
+
+        if (Input.GetMouseButton(0)) {
+            gunController.Shoot();
+        }
+    }
+    // Movement
     void FixedUpdate()
     {
         HandleMovement();
