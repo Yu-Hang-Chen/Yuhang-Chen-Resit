@@ -18,7 +18,9 @@ In this game, you must control a player who must collect 3 power cells scattered
 | Pause | Esc |
 
 ## Accessibility Features
-- List any accessibility considerations here (e.g. colorblind-friendly indicators, remappable controls, subtitles, adjustable difficulty).
+- Colours and captions coordinate together to give information to players.
+- Press ESC you could pause this game
+- No horror element anymore so that this game is more user friendly now.
 
 ## How to Build / Run
 Run this game with the build file or download the final release package.
