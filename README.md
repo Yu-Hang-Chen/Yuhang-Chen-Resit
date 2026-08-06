@@ -52,11 +52,11 @@ Packages/        - All packages
 
 ## External Assets & Credits
 I have only used one external asset for this game
-Asset Name: Water
-Creator: danielshervheim (Name of creator in Unity Asset Store)
-Source: https://github.com/danielshervheim/unity-stylized-water/tree/main/Assets/Stylized%20Water
-Accessed: 2026-8-01
-Modifications: Used as environmental prop
+-Asset Name: Water
+-Creator: danielshervheim (Name of creator in Unity Asset Store)
+-Source: https://github.com/danielshervheim/unity-stylized-water/tree/main/Assets/Stylized%20Water
+-Accessed: 2026-8-01
+-Modifications: Used as environmental prop
 
 
 ## AI Usage Disclosure
