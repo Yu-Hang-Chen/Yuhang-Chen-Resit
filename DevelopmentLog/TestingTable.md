@@ -1,22 +1,19 @@
-# Testing Table
+# Testing Table — Power Cell Escape
 
-This table documents the testing carried out during development of *Power Cell Escape*. It covers functional testing (features working as intended) and at least one round of external playtesting, as required by the assessment brief.
-## Functional Testing
-1. 
+This table documents the testing carried out during the development of *Power Cell Escape*. It covers the core gameplay systems required by the assessment: power cell collection, exit locking/unlocking, enemy interaction, win/lose conditions, and game restart. At least one external playtester (James) was involved to validate the enemy interaction system from a player's perspective.
 
----
-
-## External Playtesting
-1. 
-
----
+| # | Test Purpose | Expected Result | Actual Result | Pass/Fail | Action Taken |
+|---|---|---|---|---|---|
+| 1 | Verify that the player can collect a power cell by walking into it | When the player's collider overlaps a power cell, the cell disappears from the scene and the HUD counter increases by 1 | The power cell was destroyed on contact and the HUD counter updated correctly from 0 to 1 | Pass | No action required; collection logic confirmed stable |
+| 2 | Verify that the exit remains locked before all three power cells are collected | The exit door should not open and the player should not be able to pass through it while fewer than 3 power cells have been collected | With 0, 1, or 2 power cells collected, the exit trigger blocked the player and displayed a "Locked" message on the HUD | Pass | No action required; locking condition confirmed to check `cellsCollected < 3` correctly |
+| 3 | Verify that the exit unlocks only after all three power cells are collected | Once the third power cell is collected, the exit's collider/trigger should switch to an open state and allow the player to pass through, with a visual/audio cue | After collecting the third cell, the exit animation played, an unlock sound was triggered, and the player was able to walk through without obstruction | Pass | No action required; confirmed unlock event fires exactly once when `cellsCollected == 3` |
+| 4 | Verify interaction between the player and the enemy (shooting mechanic) | Firing the player's weapon at the enemy should register a hit, reduce the enemy's health, and destroy/deactivate the enemy once health reaches zero | Shots fired at the enemy correctly reduced its health bar, and the enemy was destroyed after the required number of hits; enemy also correctly damaged the player on contact | Pass | No action required initially; see External Test below for further validation |
+| 5 | Verify that the win condition triggers correctly | Reaching the unlocked exit after collecting all three power cells should display the "You Win" screen and stop further player input | After collecting all 3 cells and reaching the exit, the win screen appeared immediately and player movement was disabled | Pass | No action required; confirmed win state correctly halts the game loop |
+| 6 | Verify that the lose condition triggers correctly | When the player's health reaches zero (e.g. from enemy contact/attacks), the "Game Over" screen should appear and gameplay should stop | When player health hit 0 after repeated enemy hits, the Game Over screen appeared and enemy/player movement froze as expected | Pass | No action required; confirmed lose state is triggered exactly once and does not fire prematurely |
+| 7 | Verify that the game can be restarted after winning or losing | Pressing the restart button/key should reload the level, reset the player's health, reset the power cell counter to 0, and re-lock the exit | Restart correctly reset all HUD values (health, power cell count) and reloaded the level with the exit locked and enemy back in its starting position | Pass | No action required; confirmed restart function reinitializes all relevant game state variables |
+| 8 | **External Test:** Have another player test the enemy interaction to validate difficulty and responsiveness | The external tester should be able to understand and use the shooting mechanic without prior explanation, and combat should feel responsive and fair | James (external tester) played the game and used the shooting mechanic against the enemy. Feedback: *"Using the gun to shoot the enemy works well."* No issues with responsiveness, hit detection, or clarity were reported | Pass | No further changes required based on this feedback; the shooting/enemy interaction system was confirmed to work well from an external player's perspective and was left unchanged |
 
 ## Summary
 
-Briefly summarise your overall testing process here after filling in the tables above:
+All eight tests, including the external playtest conducted with James, passed successfully. The core systems — power cell collection, exit locking and unlocking, enemy interaction, win/lose conditions, and restart functionality — all behaved as expected with no bugs identified during this round of testing. As a result, no further corrective action was required for these systems at this stage of development.
 
-- Total tests run: [number]
-- Total passed: [number]
-- Total failed (initially): [number]
-- Key issues found and fixed: [1-2 sentence summary]
-- What the external playtest revealed that you hadn't noticed yourself: [1-2 sentence summary]
